@@ -1,3 +1,12 @@
-import styled from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 
-export const Wrapper = styled.main``
+interface WrapperProps {
+  color: 'white' | 'black'
+  theme: DefaultTheme
+}
+
+export const Wrapper = styled.div<WrapperProps>`
+  ${({ color, theme }) => css`
+    color: ${theme.colors[color]};
+  `}
+`
