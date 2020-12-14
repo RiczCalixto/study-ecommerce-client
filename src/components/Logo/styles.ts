@@ -1,13 +1,10 @@
-import styled, { css, DefaultTheme } from 'styled-components'
+import { Color, Size } from 'model/common-style-types'
+import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
-
-export type Color = 'white' | 'black'
-export type Size = 'normal' | 'large'
 
 interface WrapperProps {
   color: Color
   size: Size
-  theme: DefaultTheme
   hideOnMobile: boolean
 }
 
@@ -38,7 +35,7 @@ const wrapperModifies = {
 }
 
 export const Wrapper = styled.div<WrapperProps>`
-  ${({ color, theme, size, hideOnMobile }) => css`
+  ${({ color, size, hideOnMobile, theme }) => css`
     color: ${theme.colors[color]};
     ${!!size && wrapperModifies[size]}
     ${!!hideOnMobile && wrapperModifies.hideOnMobile}

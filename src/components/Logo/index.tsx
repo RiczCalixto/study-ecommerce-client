@@ -1,12 +1,13 @@
+import { Color, Size } from 'model/common-style-types'
 import * as S from './styles'
 
 export interface LogoProps {
-  color?: S.Color
-  size?: S.Size
+  color?: Color
+  size?: Size
   hideOnMobile?: boolean
 }
 
-const Logo: React.FC<LogoProps> = ({
+export const Logo: React.FC<LogoProps> = ({
   color = 'white',
   size = 'normal',
   hideOnMobile = false
@@ -86,5 +87,3 @@ const Logo: React.FC<LogoProps> = ({
     </svg>
   </S.Wrapper>
 )
-
-export default Logo
