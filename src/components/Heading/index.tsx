@@ -9,7 +9,7 @@ export interface HeadingProps {
 }
 
 export const Heading: React.FC<HeadingProps> = ({
-  color = 'black',
+  color = 'white',
   lineLeft = false,
   lineBottom = false,
   children
