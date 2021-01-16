@@ -1,9 +1,9 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import { Heading } from '.'
+import { Button } from '.'
 
 export default {
-  title: 'Heading',
-  component: Heading,
+  title: 'Button',
+  component: Button,
   argTypes: {
     children: {
       type: 'string'
@@ -11,8 +11,8 @@ export default {
   }
 } as Meta
 
-export const Component: Story = (args) => <Heading {...args} />
+export const Component: Story = (args) => <Button {...args} />
 
 Component.args = {
-  children: 'Most Populars'
+  children: 'Buy now'
 }

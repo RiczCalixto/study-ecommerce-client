@@ -1,10 +1,10 @@
-import { Color, Size } from 'model/common-style-types'
+import { Color, LogoSize } from 'model/common-style-types'
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 interface WrapperProps {
   color: Color
-  size: Size
+  size: LogoSize
   hideOnMobile: boolean
 }
 

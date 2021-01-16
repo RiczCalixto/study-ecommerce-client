@@ -6,4 +6,4 @@ export default {
   component: Logo
 } as Meta
 
-export const Default: Story<LogoProps> = (args) => <Logo {...args} />
+export const Component: Story<LogoProps> = (args) => <Logo {...args} />

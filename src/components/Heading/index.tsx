@@ -5,7 +5,6 @@ export interface HeadingProps {
   color?: Color
   lineLeft?: boolean
   lineBottom?: boolean
-  children: React.ReactNode
 }
 
 export const Heading: React.FC<HeadingProps> = ({

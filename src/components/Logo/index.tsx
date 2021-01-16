@@ -1,9 +1,9 @@
-import { Color, Size } from 'model/common-style-types'
+import { Color, LogoSize } from 'model/common-style-types'
 import * as S from './styles'
 
 export interface LogoProps {
   color?: Color
-  size?: Size
+  size?: LogoSize
   hideOnMobile?: boolean
 }
 

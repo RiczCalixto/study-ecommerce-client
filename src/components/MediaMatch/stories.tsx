@@ -6,15 +6,15 @@ export default {
   component: MediaMatch
 } as Meta
 
-export const Desktop: Story = () => (
+export const DesktopComponent: Story = () => (
   <MediaMatch greaterThan="medium">Only on Desktop</MediaMatch>
 )
 
-export const Mobile: Story = () => (
+export const MobileComponent: Story = () => (
   <MediaMatch lessThan="medium">Only on Mobile</MediaMatch>
 )
 
-Mobile.parameters = {
+MobileComponent.parameters = {
   viewport: {
     defaultViewport: 'mobile1'
   }
