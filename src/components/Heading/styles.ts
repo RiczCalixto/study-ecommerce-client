@@ -6,6 +6,7 @@ interface WrapperProps {
   lineLeft: boolean
   lineBottom: boolean
 }
+
 const wrapperModifiers = {
   lineLeft: (theme: DefaultTheme) => css`
     padding-left: ${theme.spacings.xxsmall};
