@@ -17,7 +17,7 @@ describe('<Logo />', () => {
     })
   })
 
-  it('should render a normal Logo by default', () => {
+  it('should render a small Logo by default', () => {
     renderWithTheme(<Logo />)
     expect(screen.getByLabelText(/Won Games Logo/i).parentElement).toHaveStyle({
       width: '11rem',
@@ -26,7 +26,7 @@ describe('<Logo />', () => {
   })
 
   it('should render a bigger Logo', () => {
-    renderWithTheme(<Logo size={'large'} />)
+    renderWithTheme(<Logo size={'medium'} />)
     expect(screen.getByLabelText(/Won Games Logo/i).parentElement).toHaveStyle({
       width: '20rem',
       height: '5.9rem'

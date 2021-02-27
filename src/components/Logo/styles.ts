@@ -1,19 +1,19 @@
-import { Color, LogoSize } from 'model/common-style-types'
+import { Color, Size2 } from 'model/common-style-types'
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 interface WrapperProps {
   color: Color
-  size: LogoSize
+  size: Size2
   hideOnMobile: boolean
 }
 
 const wrapperModifies = {
-  normal: () => css`
+  small: () => css`
     width: 11rem;
     height: 3.3rem;
   `,
-  large: () => css`
+  medium: () => css`
     width: 20rem;
     height: 5.9rem;
   `,

@@ -1,15 +1,15 @@
-import { Color, LogoSize } from 'model/common-style-types'
+import { Color, Size2 } from 'model/common-style-types'
 import * as S from './styles'
 
 export interface LogoProps {
   color?: Color
-  size?: LogoSize
+  size?: Size2
   hideOnMobile?: boolean
 }
 
 export const Logo: React.FC<LogoProps> = ({
   color = 'white',
-  size = 'normal',
+  size = 'small',
   hideOnMobile = false
 }) => (
   <S.Wrapper color={color} size={size} hideOnMobile={hideOnMobile}>

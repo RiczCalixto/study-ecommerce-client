@@ -1,8 +1,8 @@
-import { ButtonSize } from 'model/common-style-types'
+import { Size3 } from 'model/common-style-types'
 import * as S from './styles'
 
 export interface ButtonProps {
-  size?: ButtonSize
+  size?: Size3
   fullWidth?: boolean
   icon?: React.ReactNode
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
