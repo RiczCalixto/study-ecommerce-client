@@ -8,7 +8,7 @@ describe('<Button />', () => {
     renderWithTheme(<Button>Buy now</Button>)
 
     expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
-      height: '4rem',
+      height: '4.0rem',
       fontSize: '1.4rem',
       padding: '0.8rem 3.2rem'
     })
@@ -18,7 +18,7 @@ describe('<Button />', () => {
     renderWithTheme(<Button size="small">Buy now</Button>)
 
     expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
-      height: '3rem',
+      height: '3.2rem',
       fontSize: '1.2rem'
     })
   })
@@ -27,7 +27,7 @@ describe('<Button />', () => {
     renderWithTheme(<Button size="large">Buy now</Button>)
 
     expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
-      height: '5rem',
+      height: '4.8rem',
       fontSize: '1.6rem',
       padding: '0.8rem 4.8rem'
     })
@@ -56,5 +56,18 @@ describe('<Button />', () => {
 
     expect(screen.getByText(/buy now/i)).toBeInTheDocument()
     expect(screen.getByTestId('icon')).toBeInTheDocument()
+  })
+
+  it('should render Button as a Link', () => {
+    renderWithTheme(
+      <Button as="a" href="/link">
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
+      'href',
+      '/link'
+    )
   })
 })

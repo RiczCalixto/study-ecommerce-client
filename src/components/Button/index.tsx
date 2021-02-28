@@ -1,12 +1,16 @@
 import { Size3 } from 'model/common-style-types'
 import * as S from './styles'
 
-export interface ButtonProps {
+type ButtonTypes =
+  | React.AnchorHTMLAttributes<HTMLAnchorElement>
+  | React.ButtonHTMLAttributes<HTMLButtonElement>
+
+export type ButtonProps = {
   size?: Size3
   fullWidth?: boolean
   icon?: React.ReactNode
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
-}
+  as?: React.ElementType
+} & ButtonTypes
 
 export const Button: React.FC<ButtonProps> = ({
   children,
