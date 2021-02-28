@@ -10,12 +10,12 @@ export interface HeadingProps {
 }
 
 export const Heading: React.FC<HeadingProps> = ({
+  children,
   color = 'white',
-  lineLeft = false,
-  lineBottom = false,
-  lineColor = 'primary',
   size = 'medium',
-  children
+  lineColor = 'primary',
+  lineLeft = false,
+  lineBottom = false
 }) => (
   <S.Wrapper
     color={color}

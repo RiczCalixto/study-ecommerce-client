@@ -29,7 +29,7 @@ describe('<Heading />', () => {
     renderWithTheme(<Heading lineLeft>New Feature</Heading>)
     expect(screen.getByRole('heading', { name: /New Feature/i })).toHaveStyle({
       paddingLeft: '0.8rem',
-      borderLeft: '0.7rem solid #3CD31'
+      borderLeft: '0.7rem solid #F231A5'
     })
   })
 
